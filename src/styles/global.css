@@ -1,4 +1,4 @@
-/* global.css */
+
 
 body {
   margin: 0;
@@ -98,9 +98,12 @@ li {
 }
 .profile-container {
   display: flex;
-  justify-content: center;
+  flex-direction: column; /* Stack vertically */
+  align-items: center; /* Center horizontally */
   padding: 30px;
+  gap: 20px; /* Optional: adds space between cards */
 }
+
 
 .profile-card {
   background-color: #fff0f6;
@@ -114,16 +117,29 @@ li {
 }
 
 .profile-card h2 {
+  font-family: 'Baloo 2', cursive;
   color: #ff4da6;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   font-size: 2rem;
 }
 
 .profile-card p {
+  font-family: 'Baloo 2', cursive;
   font-size: 1rem;
   color: #555;
-  margin: 8px 0;
+  margin: 4px 0;
 }
+.profile-title {
+  font-family: 'Baloo 2', cursive;
+  color: #d81e5b; /* Darker pink */
+  font-size: 2.2rem;
+  text-align: center;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 2px rgba(216, 30, 91, 0.2);
+}
+
 
 .profile-image {
   width: 100px;
@@ -141,9 +157,9 @@ li {
 
 .profile-card {
   background-color: #fff0f6;
-  padding: 30px;
-  border-radius: 20px;
-  max-width: 400px;
+  padding: 10px;
+  border-radius: 10px;
+  max-width: 200px;
   width: 100%;
   text-align: center;
   box-shadow: 0 10px 25px rgba(255, 77, 166, 0.2);
@@ -152,14 +168,14 @@ li {
 
 .profile-card h2 {
   color: #ff4da6;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   font-size: 2rem;
 }
 
 .profile-card p {
   font-size: 1rem;
   color: #555;
-  margin: 8px 0;
+  margin: 4px 0;
 }
 
 .profile-image {
@@ -335,3 +351,61 @@ body {
 .login-form button:hover {
   background-color: #d81e5b;
 }
+.floating-background {
+  position: relative;
+  overflow: hidden;
+}
+.floating-background {
+  position: relative;
+  overflow: hidden;
+}
+
+.floating-icon {
+  position: absolute;
+  font-size: 2.5rem;
+  animation: float 12s infinite;
+  opacity: 0.6;
+  z-index: 0;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(100vh) translateX(0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(-10vh) translateX(20vw);
+    opacity: 0;
+  }
+}
+body {
+  background-color: #fff0f6;
+  color: #333;
+}
+
+html.dark body {
+  background-color: #292626;
+  color: #eee;
+}
+
+html.dark .profile-card {
+  background-color: #2a2a2a;
+  border-color: #ff4da6;
+  color: #eee;
+  box-shadow: 0 10px 25px rgba(255, 77, 166, 0.6);
+}
+
+html.dark button {
+  background-color: #ff4da6;
+  color: white;
+}
+
+html.dark button:hover {
+  background-color: #d81e5b;
+}
+
+
+
